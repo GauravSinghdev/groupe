@@ -167,7 +167,11 @@ export default function RoomComp() {
               msg.sender === username ? "items-end" : "items-start"
             }`}
           >
-            <div className="max-w-[80%] group">
+            <div
+              className={`max-w-[80%] group bg-gray-900 p-2 shadow-lg ${
+                msg.sender === username ? "rounded-bl-lg" : "rounded-br-lg"
+              }`}
+            >
               <div className="flex items-baseline gap-3 mb-1">
                 <span
                   className={`text-xs font-bold ${
@@ -176,7 +180,7 @@ export default function RoomComp() {
                 >
                   {msg.sender === username ? "You" : msg.sender}
                 </span>
-                <span className="text-[10px] text-zinc-600">
+                <span className="text-[10px] text-zinc-300">
                   {format(msg.timeStamp, "HH:mm")}
                 </span>
               </div>

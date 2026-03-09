@@ -20,7 +20,7 @@ export default function IdentityCard() {
       if (res.status === 200) {
         router.push(`/room/${res.data?.roomId}`);
       }
-    },
+    }, 
   });
 
   useEffect(() => {
